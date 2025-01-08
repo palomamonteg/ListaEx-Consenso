@@ -1,0 +1,26 @@
+/*Exercícios - Treina Recife 
+ * 
+ * Questão 3: Soma de Dois Números:
+Faça um programa que peça dois números e imprima a soma. */
+
+import java.util.Scanner;
+
+
+public class Atividade2 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Digite um número: ");
+		int n = scanner.nextInt();
+		System.out.println("Digite outro número: ");
+		int n2 = scanner.nextInt();
+		int soma = n + n2;
+		System.out.printf("A soma entre %d e %d é: %d.", n, n2, soma);
+		
+	
+  }
+			
+}
+		
+
+
+	
