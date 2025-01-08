@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class POO02ED01 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a 1º nota: ");
+        double n1 = sc.nextDouble();
+        System.out.println("Digite a 2º nota: ");
+        double n2 = sc.nextDouble();
+        double media = (n1+n2)/2;
+        if (media >= 7) {
+            System.out.println("Aluno aprovado!");
+        } else if (media < 7) {
+            System.out.println("Aluno reprovado!");
+        } else if (media == 10) {
+            System.out.println("Aluno aprovado com Mérito!");
+        }
+
+        sc.close();
+    }
+}
