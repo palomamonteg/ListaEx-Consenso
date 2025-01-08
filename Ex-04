@@ -1,0 +1,31 @@
+/*Exercícios - Treina Recife 
+ * 
+ * Questão 4: Média de Notas Bimestrais
+Faça um programa que peça as 4 notas bimestrais de um aluno e imprima a média. */
+
+import java.util.Scanner;
+
+
+public class Atividade2 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Digite a 1º nota: ");
+		double n1 = scanner.nextDouble();
+		System.out.println("Digite a 2º nota: ");
+		double n2 = scanner.nextDouble();
+		System.out.println("Digite a 3º nota: ");
+		double n3 = scanner.nextDouble();
+		System.out.println("Digite a 4º nota: ");
+		double n4 = scanner.nextDouble();
+		double media = (n1 + n2 + n3 + n4) / 4;
+		System.out.printf("A média é: %.2f", media);
+		
+		scanner.close();
+		
+  }
+			
+}
+		
+
+
+	
