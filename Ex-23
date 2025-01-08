@@ -1,0 +1,34 @@
+/*  Faça um programa que peça o tamanho do arquivo para download (em MB) e a velocidade de um link 
+ de internet  (em MPBs), calcule e informe o tempo aproximado do downloads do arquivo usando este link 
+ (em minutos). */
+
+import java.util.Scanner;
+
+public class POO02ED01 {
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Infome o tamanho do arquivo: ");
+        double arquivo = scanner.nextDouble();
+
+        System.out.println("Informe a velocidade do link: ");
+        double velocidade = scanner.nextDouble();
+
+        double velocidadeMPBS = velocidade * 0.125;
+
+        double tempoSegundos = arquivo / velocidadeMPBS;
+
+        double tempoMinutos = tempoSegundos / 60;
+
+        scanner.close();
+
+        System.out.printf("O tempo aproximado de download será: %.2f minutos.%n", tempoMinutos);
+
+
+
+
+
+
+        
+    }
+}
