@@ -1,0 +1,32 @@
+/*Exercícios - Treina Recife 
+ * 
+ * Questão 8: Cálculo de Salário
+Faça um programa que pergunte quanto você ganha por hora e o número de horas
+trabalhadas no mês. Calcule e imprima o total do seu salário no referido mês.*/
+
+import java.util.Scanner;
+
+
+public class Atividade2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Informe quanto você ganha por hora trabalhada: ");
+		double salario = sc.nextDouble();
+		System.out.println("Informe o número de horas trabalhadas mês: ");
+		double horas = sc.nextDouble();
+		double calculo = salario * horas;
+		System.out.printf("O salário total a ser ganho no mês atual é: R$%.2f", calculo);
+		
+		sc.close();
+		
+		
+		
+		
+		
+  }
+			
+}
+		
+
+
+	
