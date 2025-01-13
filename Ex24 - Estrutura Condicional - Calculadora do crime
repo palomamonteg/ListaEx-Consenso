@@ -1,0 +1,58 @@
+/*Exercícios -
+ *   1.  Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. 
+ *   As perguntas são: "Telefonou para a vítima?" "Esteve no local do crime?" "Mora perto da vítima?"
+"Devia para a vítima?" "Já trabalhou com a vítima?" 
+O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. 
+Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", 
+entre 3 e 4 como "Cúmplice" e 5 como "Assassino". 
+Caso contrário, ele será classificado como "Inocente".
+*/
+
+import java.util.Scanner;
+
+
+public class Atividade2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Telefonou para a vítima? (sim ou não");
+		String p1 = sc.nextLine().toLowerCase();
+		System.out.println("Esteve no local do crime? (sim ou não)");
+		String p2 = sc.nextLine().toLowerCase();
+		System.out.println("Mora perto da vítima? (sim ou não)");
+		String p3 = sc.nextLine().toLowerCase();
+		System.out.println("Devia para a vítima? (sim ou não)" );
+		String p4 = sc.nextLine().toLowerCase();
+		System.out.println("Já trabalhou com a vítima? (sim ou não)" );
+		String p5 = sc.nextLine().toLowerCase();
+		
+		
+		int cont = 0;
+		
+		if (p1.equalsIgnoreCase("sim")); {
+			cont +=1;
+		}
+		if (p2.equalsIgnoreCase("sim")) {
+			cont+=1;
+		}
+		if (p3.equalsIgnoreCase("sim")) {
+			cont+=1;
+		}
+		if (p4.equalsIgnoreCase("sim")) {
+			cont+=1;
+		}
+		if (p5.equalsIgnoreCase("sim")) {
+			cont+=1;
+		}
+		
+		if(cont<=1) {
+			System.out.println("Você é considerado inocente");		
+		} if (cont ==2) {
+			System.out.println("Você é considerado suspeito");
+		} if (cont == 3 || cont == 4) {
+			System.out.println("Você é considerado cúmplice");			
+		} if (cont >= 5){
+			System.out.println("Você é considerado assassino");	
+		}
+		
+	}
+}	
