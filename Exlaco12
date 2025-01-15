@@ -1,0 +1,57 @@
+/*Questão 12: Tabuada
+Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número
+inteiro entre 1 a 10. O usuário deve informar de qual número e qual operação
+matemática (soma, subtração, multiplicação ou divisão) ele deseja ver a tabuada.
+Questão 13: */
+
+import java.util.Scanner;
+
+public class Exlacos12 {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Informe um número inteiro de 1 a 10: ");
+    int n = sc.nextInt();
+    System.out.println("Informe a operação desejada:\n[1] - Multiplicação\n[2] - Divisão\n[3] - Soma\n[4] - Subtração");
+    int resposta = sc.nextInt();
+
+    if (resposta == 1) {
+        System.out.printf("A tabuada de multiplicação de %d é:\n", n);
+
+        for (int i = 1; i <= 10; i++) {
+        int tabuada = n*i;
+        System.out.printf("%d X %d = %d%n", n, i, tabuada);
+        }
+
+    } 
+    if (resposta == 2) {
+        System.out.printf("A tabuada de divisão de %d é:\n", n);
+
+        for (int i = 1; i <= 10; i++) {
+        int tabuada = n/i;
+        System.out.printf("%d / %d = %d%n", n, i, tabuada);
+        }
+    }
+
+    if (resposta == 3) {
+        System.out.printf("A tabuada de soma de %d é:\n", n);
+
+        for (int i = 1; i <= 10; i++){
+        int tabuada = n+i;
+        System.out.printf("%d + %d = %d%n", n, i, tabuada);
+
+        }
+    }
+
+    if (resposta == 4) {
+
+        System.out.printf("A tabuada de subtração de %d é:\n", n);
+
+        for (int i = 1; i <= 10; i++){
+        int tabuada = n-i;
+        System.out.printf("%d - %d = %d%n", n, i, tabuada);
+
+        }
+    }
+    sc.close();
+    }
+}
