@@ -1,0 +1,75 @@
+/*2 - Uma pesquisa sobre algumas características físicas da população de uma
+determinada região coletou os seguintes dados referentes a cada habitante
+para serem analisados:
+
+• Sexo (“M” - Masculino, “F” - Feminino)
+• Cor dos Olhos (“A”-Azul,”V”-Verde, “C"-Castanho)
+• Idade em anos
+
+Para cada habitante foi digitada uma linha com esses dados e a última linha,
+que não corresponde a ninguém conterá o valor de idade igual a -1. Fazer um
+programa que determine e imprima:
+a) A maior idade dos habitantes;
+b) A porcentagem de indivíduos do sexo feminino cuja idade está entre 18 e
+35 anos inclusive e que tenham olhos verdes; */
+
+import java.util.Scanner;
+
+public class Ex02 {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    char sexo;
+    char corDosOlhos;
+    int idade;
+    int cont = 0;
+    
+
+    do {
+        System.out.println("Informe a sua idade: ");
+        idade = sc.nextInt();
+        if (idade == 0){        
+        }
+        int maior = 0;
+        int menor = 0;
+        if (idade > maior) {
+            maior = idade; 
+        } else if (idade < menor) {
+            menor = idade;
+        }
+
+    } while (idade == 0);
+
+    do {
+        System.out.println("Informe a cor dos seus olhos ('A'- Azul,'V'- Verde, 'C'- Castanho): ");
+        corDosOlhos = sc.next().toUpperCase().charAt(0);
+        if (corDosOlhos != 'A' && corDosOlhos != 'V' && corDosOlhos != 'C' ) {
+            System.out.println("Informe uma cor válida!");
+
+        }
+
+    } while (corDosOlhos != 'A' && corDosOlhos != 'V' && corDosOlhos != 'C' );
+
+    do {
+        System.out.println("Informe o seu sexo: \n'F' - Feminino:\n'M' - Masculino: ");
+        sexo = sc.next().toUpperCase().charAt(0);
+        if (sexo != 'F' && sexo != 'M') {
+            System.out.println("Valor inválido. Digite novamente!");
+        }
+        if (sexo == 'F' && idade == 18 || idade == 35){
+            if (corDosOlhos == 'V') {
+                cont += sexo;
+                
+
+            }
+        }
+
+        } while(sexo != 'F' && sexo != 'M');
+
+        System.out.print("A quantidade de mulheres do sexo feminino é: " + cont+1);
+ 
+    
+    }
+}
+
+
+
